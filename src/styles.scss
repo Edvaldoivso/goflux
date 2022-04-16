@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import './dist/scss/variaveis.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    background-color: $background-color;
+    font-weight: 400;
+    font-family: Poppins;     
+    padding: 10;
+  
+
+}

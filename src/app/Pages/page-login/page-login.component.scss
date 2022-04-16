@@ -1,0 +1,50 @@
+@import '../../../dist/scss/variaveis.scss';
+
+#Corpo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5%;
+    color: $fontes-collor;
+
+
+
+}
+
+
+.img {
+
+    width: 60%;
+    height: 100%;
+
+}
+
+
+
+
+.Direita {
+    background-color: $objects-color;
+    padding: 5%;
+    width: 200px;
+    height: 200%;
+    text-align: center;
+    border: 2px solid $alertas-collor;
+    border-radius: 3%;
+
+    form,
+    label,
+    h2,
+    h3 {
+        background-color: transparent;
+    }
+
+    input {
+        background-color: transparent;
+        border: 2px solid $atention-collor;
+        cursor: pointer;
+
+    }
+
+
+}
