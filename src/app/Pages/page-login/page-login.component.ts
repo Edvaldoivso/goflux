@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageLoginComponent implements OnInit {
 
+
+  mensagem : string = "FAÇA SEU LOGIN"
+
+
+  
+
   constructor() { }
 
   ngOnInit(): void {

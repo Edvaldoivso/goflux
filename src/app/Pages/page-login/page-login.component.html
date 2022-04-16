@@ -4,17 +4,26 @@
   </div>
 
   <div class="Direita">
-    <h3>FAÇA SEU LOGIN</h3>
+    <h3>{{ mensagem }}</h3>
     <form action="Login">
       <label for="cnpj">CJPJ/CPF</label>
-      <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ ou CPF" />
-      <br />
+      <input
+        type="text"
+        name="cnpj"
+        id="cnpj"
+        placeholder="CNPJ ou CPF"
+        required="required"
+        
+      
+      />
+
       <label for="senha">SENHA</label>
       <input
         type="password"
         name="senha"
         id="senha"
         placeholder="Insira a sua senha"
+        
       />
 
       <app-proceguir></app-proceguir>
@@ -22,7 +31,6 @@
       <h2>OU</h2>
 
       <app-cadastrar></app-cadastrar>
-      
     </form>
   </div>
 </div>
