@@ -4,33 +4,33 @@
   </div>
 
   <div class="Direita">
-    <h3>{{ mensagem }}</h3>
-    <form action="Login">
-      <label for="cnpj">CJPJ/CPF</label>
-      <input
-        type="text"
-        name="cnpj"
-        id="cnpj"
-        placeholder="CNPJ ou CPF"
-        required="required"
-        
-      
-      />
+    <h3>{{ "Faça seu Login" | uppercase }}</h3>
 
-      <label for="senha">SENHA</label>
-      <input
-        type="password"
-        name="senha"
-        id="senha"
-        placeholder="Insira a sua senha"
-        
-      />
+    <label for="cnpj">CJPJ/CPF</label>
 
-      <app-proceguir></app-proceguir>
+    <input
+      type="text"
+      name="cnpj"
+      id="cnpj"
+      placeholder="CNPJ ou CPF"
+      [(ngModel)]="cnpj"
+    />
 
-      <h2>OU</h2>
+    <label for="senha">SENHA</label>
+    <input
+      type="password"
+      name="senha"
+      id="senha"
+      placeholder="Insira a sua senha"
+      [(ngModel)]="senha"
+    />
 
-      <app-cadastrar></app-cadastrar>
-    </form>
+    <h5 *ngIf="alerta == true">{{ mensagem }}</h5>
+
+    <app-proceguir (click)="validalogin()"></app-proceguir>
+
+    <h2>OU</h2>
+
+    <app-cadastrar (click)="cadastraruser()"></app-cadastrar>
   </div>
 </div>

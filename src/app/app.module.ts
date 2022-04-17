@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 //Components
@@ -17,6 +17,12 @@ import { ProceguirComponent } from  './Component/BotaoProceguir/proceguir/proceg
 import { PausarComponent } from  './Component/BotaoPausar/pausar/pausar.component';
 import { SalvarComponent } from  './Component/BotaoSalvar/salvar/salvar.component';
 
+//Services
+import { LoginService } from './login.service';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,15 +35,20 @@ import { SalvarComponent } from  './Component/BotaoSalvar/salvar/salvar.componen
     ProceguirComponent,
     PausarComponent,
     SalvarComponent,
+   
+    
+  
     
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

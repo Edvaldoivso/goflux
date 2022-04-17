@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ProceguirComponent implements OnInit {
   public validacao: Array<{ cnpj: number; senha: string }> = [];
 
+ 
+
+
 
   
   ValidaAcesso() {
