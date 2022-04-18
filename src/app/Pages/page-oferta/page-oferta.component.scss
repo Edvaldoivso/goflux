@@ -1,0 +1,76 @@
+@import '../../../dist/scss/variaveis.scss';
+
+#Corpo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    margin: 5%;
+    color: $fontes-collor;
+
+
+}
+
+
+img {
+
+    width: 120%;
+    height: 120%;
+
+}
+
+
+.Direita {
+    background-color: $objects-color;
+    padding: 5%;
+    width: 300px;
+    height: 200%;
+    text-align: center;
+    border: 2px solid $alertas-collor;
+    border-radius: 3%;
+
+    form,
+    label,
+    h2,
+    h3 {
+        background-color: transparent;
+    }
+
+
+    h5 {
+        background-color: $alertas-collor;
+        color: aliceblue;
+    }
+
+
+
+}
+
+.Esquerda {
+
+    
+    width: 500px;
+    height: 100%;
+    text-align: center;
+    border: 2px solid $alertas-collor;
+    border-radius: 3%;
+    
+
+    section {
+        margin: 5%;
+        cursor: pointer;
+        font-size: 25px;
+
+
+    }
+
+        :hover {
+        border-radius: 5%;
+        background-color: $atention-collor;
+    }
+
+
+}
+
+  

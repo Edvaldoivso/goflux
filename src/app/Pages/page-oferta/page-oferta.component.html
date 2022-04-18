@@ -1,1 +1,39 @@
-<p>page-oferta works!</p>
+<div id="Corpo">
+  <div class="Esquerda">
+    <h1>{{ titleofertas }}</h1>
+    <br />
+
+    <label
+      name="numitem"
+      
+      class="item"
+      (click)="SelecionarItem()"
+      *ngFor="let item of listofertas"
+    >
+      <input value="{{ item.id }}" />
+      <input value="{{ item.produto }}" />
+    </label>
+
+    <section></section>
+
+    <img [src]="imgtalk" *ngIF="listofertas == ''" />
+  </div>
+
+  <div class="Direita">
+    <h3>Detalhe da Oferta</h3>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Quantidade</th>
+        <th>Valor</th>
+      </tr>
+
+      <td>{{ produto2 }}</td>
+      <td>{{ quantidade2 }}</td>
+      <td>{{ valor2 }}</td>
+    </table>
+    <br />
+    <button>Aceitar</button>
+    <button>Rejeitar</button>
+  </div>
+</div>
