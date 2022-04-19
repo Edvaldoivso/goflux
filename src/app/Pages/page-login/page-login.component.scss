@@ -3,10 +3,11 @@
 #Corpo {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    margin: 5%;
+    // margin: 5%;
     color: $fontes-collor;
+    padding: 5%;
 
 
 
@@ -25,13 +26,15 @@
 
 .Direita {
     background-color: $objects-color;
-    padding: 5%;
-    width: 200px;
+    padding: 1%;
+    width: 300px;
     height: 200%;
     text-align: center;
     border: 2px solid $alertas-collor;
     border-radius: 3%;
 
+    .form-group,
+     label,
     form,
     label,
     h2,
@@ -46,9 +49,9 @@
 
     }
 
-    h5{
+    h5 {
         background-color: $alertas-collor;
-        color:aliceblue;
+        color: aliceblue;
     }
 
 

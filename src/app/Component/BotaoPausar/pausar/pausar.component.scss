@@ -1,0 +1,14 @@
+@import '../../../../dist/scss/variaveis.scss';
+
+button {
+    background-color: $alertas-collor;
+    height: 50px;
+    width: 30%;
+    border-radius: 5%;
+    font-size: large;
+    box-shadow: 1px 1px 1px #F6D8CE;
+    border: none;
+    color: #ffffff;
+
+
+}

@@ -16,6 +16,9 @@ import { CadastrarComponent } from './Component/BotaoCadastrar/cadastrar/cadastr
 import { ProceguirComponent } from  './Component/BotaoProceguir/proceguir/proceguir.component';
 import { PausarComponent } from  './Component/BotaoPausar/pausar/pausar.component';
 import { SalvarComponent } from  './Component/BotaoSalvar/salvar/salvar.component';
+import { FormLanceComponent } from './Pages/page-cadastro/Lance/form-lance/form-lance.component';
+import { FormEmpresaComponent } from './Pages/page-cadastro/Empresa/form-empresa/form-empresa.component';
+import { FormColaboradorComponent } from './Pages/page-cadastro/Colaborador/form-colaborador/form-colaborador.component';
 
 //Services
 import { LoginService } from './login.service';
@@ -35,6 +38,9 @@ import { LoginService } from './login.service';
     ProceguirComponent,
     PausarComponent,
     SalvarComponent,
+    FormLanceComponent,
+    FormEmpresaComponent,
+    FormColaboradorComponent,
    
     
   

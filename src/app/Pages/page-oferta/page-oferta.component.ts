@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/login.service';
+
 
 @Component({
   selector: 'app-page-oferta',
@@ -6,15 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-oferta.component.scss'],
 })
 export class PageOfertaComponent implements OnInit {
+
+constructor( private router: Router, private authService: LoginService ) {}
+
   imgtalk: string = '../../../assets/Conversation.gif';
 
+
   public titleofertas: string = 'LANCES ATIVOS';
-  public produto2: string = 'Produto aqui';
+  public produto2: string = 'Macarrão';
   public quantidade2: string = '400T';
   public valor2: string = '400rs';
-  public numitem : string = ''
+  public nomeitem: string = '';
 
-
+  //Array de Ofertas
   public listofertas: Array<{
     id: number;
     produto: string;
@@ -27,15 +34,39 @@ export class PageOfertaComponent implements OnInit {
     { id: 4, produto: 'SOJA', valor: 2000, quantidade: '10t' },
   ];
 
-  pegaid() {
-    window.confirm('Clicado');
-  }
+  //Array de detalhes
+  public DetalheOferta: Array<{ PrecoCobrado: number; RSTransporte: number }> =
+    [
+      { PrecoCobrado: 400, RSTransporte: 9000 },
+      { PrecoCobrado: 300, RSTransporte: 700 },
+      { PrecoCobrado: 7000, RSTransporte: 8000 },
+      { PrecoCobrado: 100, RSTransporte: 100 },
+    ];
+
+  
 
   SelecionarItem() {
-    window.confirm("Valor item" + this.numitem);
+    window.confirm('Item Selecionado');
   }
 
-  constructor() {}
+  aceitar() {
+    window.confirm('Aceitar');
+  }
+
+  remover() {
+    window.confirm('Remover');
+  }
+
+
+  criarLance(){
+
+  }
+
+    cadastraruser() {
+    this.router.navigate(['/cadastro']);
+  }
+
+  
 
   ngOnInit(): void {}
 }

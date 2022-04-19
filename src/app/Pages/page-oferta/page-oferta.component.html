@@ -1,39 +1,40 @@
 <div id="Corpo">
+  <app-cadastrar (click)="cadastraruser()"></app-cadastrar>
+  <br />
   <div class="Esquerda">
     <h1>{{ titleofertas }}</h1>
-    <br />
 
-    <label
-      name="numitem"
-      
-      class="item"
+    <ul
+      class="products"
       (click)="SelecionarItem()"
       *ngFor="let item of listofertas"
     >
-      <input value="{{ item.id }}" />
-      <input value="{{ item.produto }}" />
-    </label>
+      <li>{{ item.produto }}</li>
+    </ul>
 
-    <section></section>
-
-    <img [src]="imgtalk" *ngIF="listofertas == ''" />
+    <div *ngIf="!listofertas.length">
+      <h3>
+        Parece que não existe nenhum lance ativo, que tal cadastrar um agora !
+      </h3>
+      <img [src]="imgtalk" />
+    </div>
   </div>
 
   <div class="Direita">
-    <h3>Detalhe da Oferta</h3>
-    <table>
-      <tr>
-        <th>Item</th>
-        <th>Quantidade</th>
-        <th>Valor</th>
-      </tr>
+    <h2>Ofertas Recebidas</h2>
+    <h3 *ngIf="!DetalheOferta.length">
+      Nenhuma oferta ainda foi oferecida para seus produtos.
+    </h3>
+    <section *ngIf="DetalheOferta.length">
+      <ul *ngFor="let item of DetalheOferta">
+        <li>
+          Valor cobrado de {{ item.PrecoCobrado }}R$ por
+          {{ item.RSTransporte }}Kg transportado
 
-      <td>{{ produto2 }}</td>
-      <td>{{ quantidade2 }}</td>
-      <td>{{ valor2 }}</td>
-    </table>
-    <br />
-    <button>Aceitar</button>
-    <button>Rejeitar</button>
+          <button (click)="aceitar()">✔️</button>
+          <button (click)="remover()">❌</button>
+        </li>
+      </ul>
+    </section>
   </div>
 </div>

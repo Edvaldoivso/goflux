@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: flex-start;
     height: 100%;
-    margin: 5%;
+    padding: 5%;
     color: $fontes-collor;
 
 
@@ -15,33 +15,37 @@
 
 img {
 
-    width: 120%;
-    height: 120%;
+    width: 50%;
+    height: 50%;
+
 
 }
 
 
 .Direita {
     background-color: $objects-color;
-    padding: 5%;
-    width: 300px;
+    margin: 1%;
+    width: 50%;
     height: 200%;
     text-align: center;
     border: 2px solid $alertas-collor;
     border-radius: 3%;
 
-    form,
-    label,
+
     h2,
-    h3 {
+    h3,
+    h5,
+    li,
+    ul {
         background-color: transparent;
     }
 
 
-    h5 {
-        background-color: $alertas-collor;
-        color: aliceblue;
+    ul {
+        border: 2px solid $atention-collor;
+
     }
+
 
 
 
@@ -49,13 +53,13 @@ img {
 
 .Esquerda {
 
-    
+
     width: 500px;
     height: 100%;
     text-align: center;
     border: 2px solid $alertas-collor;
     border-radius: 3%;
-    
+
 
     section {
         margin: 5%;
@@ -65,12 +69,15 @@ img {
 
     }
 
-        :hover {
-        border-radius: 5%;
-        background-color: $atention-collor;
-    }
 
 
 }
 
-  
+.products :hover {
+    border-radius: 5%;
+    background-color: $atention-collor;
+}
+
+li {
+    list-style-type: none;
+}

@@ -6,24 +6,28 @@
   <div class="Direita">
     <h3>{{ "Faça seu Login" | uppercase }}</h3>
 
-    <label for="cnpj">CJPJ/CPF</label>
-
-    <input
-      type="text"
-      name="cnpj"
-      id="cnpj"
-      placeholder="CNPJ ou CPF"
-      [(ngModel)]="cnpj"
-    />
-
-    <label for="senha">SENHA</label>
-    <input
-      type="password"
-      name="senha"
-      id="senha"
-      placeholder="Insira a sua senha"
-      [(ngModel)]="senha"
-    />
+    <div class="form-group">
+      <label for="cnpj">CNPJ/CPF</label>
+      <input
+        [(ngModel)]="cnpj"
+        type="text"
+        class="form-control"
+        id="cnpj"
+        aria-describedby="CNPJ ou CPF"
+        placeholder="CNPJ ou CPF"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="senha">SENHA</label>
+      <input
+        [(ngModel)]="senha"
+        type="password"
+        class="form-control"
+        id="senha"
+        placeholder="Insira a senha"
+      />
+    </div>
 
     <h5 *ngIf="alerta == true">{{ mensagem }}</h5>
 

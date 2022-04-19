@@ -12,6 +12,7 @@ import { PageOfertaComponent } from './Pages/page-oferta/page-oferta.component';
 //Render
 const routes: Routes = [
   
+  {path:"", component : PageLoginComponent},
   {path:"login", component : PageLoginComponent},
   {path:"cadastro", component : PageCadastroComponent},
   {path:"lance", component : PageLanceComponent},

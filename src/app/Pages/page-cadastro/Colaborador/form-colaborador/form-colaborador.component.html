@@ -1,0 +1,76 @@
+<div id="formcolaborador">
+  <h1>CADASTRE OS SEUS COLABORADORES</h1>
+
+  <form>
+    <div class="row">
+      <div class="col">
+        <label for="cnpj">CPF</label>
+        <input id="cnpj" type="text" class="form-control" placeholder="CPF" />
+      </div>
+      <div class="col">
+        <label for="nome">NOME</label>
+        <input
+          id="nome"
+          type="text"
+          class="form-control"
+          placeholder="Como quer ser chamado(a)"
+        />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <label for="cidade">CIDADE</label>
+        <input
+          id="cidade"
+          type="text"
+          class="form-control"
+          placeholder="Qual a sua Cidade?"
+        />
+      </div>
+      <div class="col">
+        <label for="estado">ESTADO</label>
+        <input
+          id="estado"
+          type="text"
+          class="form-control"
+          placeholder="Coloque seu Estado"
+        />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <label for="area">ÁREA DE ATUAÇÃO</label>
+        <input
+          id="area"
+          type="text"
+          class="form-control"
+          placeholder="Onde você atua?"
+        />
+      </div>
+      <div class="col">
+        <label for="senha">SENHA PARA O ACESSO</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="cadastre uma senha aqui."
+        />
+      </div>
+
+      <div class="col">
+        <label for="senha">GESTOR DE CONTA?</label><br />
+        <input class="form-check-input" type="checkbox" id="gestor" />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <app-salvar></app-salvar>
+      </div>
+      <div class="col">
+        <app-pausar></app-pausar>
+      </div>
+    </div>
+  </form>
+</div>
