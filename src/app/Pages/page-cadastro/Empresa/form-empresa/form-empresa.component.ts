@@ -19,7 +19,8 @@ export class FormEmpresaComponent implements OnInit {
     let Dados = [this.senha, this.area, this.cidade, this.rasao, this.estado];
 
     let StringDados = Dados.toString();
-    localStorage.setItem(this.cnpj, StringDados);
+    localStorage.setItem(this.rasao, StringDados);
+    localStorage.setItem(this.cnpj, this.senha);
     window.confirm('Salvo Localmente !');
   }
 

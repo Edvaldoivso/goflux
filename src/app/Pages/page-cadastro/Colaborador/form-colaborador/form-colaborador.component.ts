@@ -26,7 +26,8 @@ export class FormColaboradorComponent implements OnInit {
       this.gestor, 
     ];
     let StringDados = Dados.toString();
-    localStorage.setItem(this.cnpj, StringDados);
+    localStorage.setItem(this.cnpj, this.senha);
+    localStorage.setItem(this.nome, StringDados);
     window.confirm('Salvo Localmente !');
   }
 
