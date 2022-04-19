@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-form-empresa',
   templateUrl: './form-empresa.component.html',
-  styleUrls: ['./form-empresa.component.scss']
+  styleUrls: ['./form-empresa.component.scss'],
 })
 export class FormEmpresaComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  public cnpj: string = '';
+  public rasao: string = '';
+  public cidade: string = '';
+  public estado: string = '';
+  public area: string = '';
+  public senha: string = '';
 
-  ngOnInit(): void {
+  CadastraEmpresa() {
+    let Dados = [this.senha, this.area, this.cidade, this.rasao, this.estado];
+
+    let StringDados = Dados.toString();
+    localStorage.setItem(this.cnpj, StringDados);
+    window.confirm('Salvo Localmente !');
   }
 
+  ngOnInit(): void {}
 }

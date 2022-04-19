@@ -1,40 +1,70 @@
-<div id="formlance">
-<h1>PROPOSTA DE COLETA</h1>
 
-<form>
-  <div class="row">
-    <div class="col">
-    <label for="origem">ORIGEM</label>
-      <input id="origem" type="text" class="form-control" placeholder="LOCAL DE PARTIDA">
-    </div>
-   
-  </div>
-    <br>
-  <div class="row">
-    <div class="col">
-    <label for="destino">DESTINO</label>
-      <input id="destino" type="text" class="form-control" placeholder="Qual o Destino">
-    </div>
-    
-  </div>
+
 <br>
-  <div class="row">
-    <div class="col">
-    <label for="produto">PRODUTO</label>
-      <input id="produto" type="text" class="form-control" placeholder="Qual o produto a ser transportado">
+<div id="formlance">
+  <h1>PROPOSTA DE COLETA</h1>
+
+  <form>
+    <div class="row">
+      <div class="col">
+        <label for="origem">ORIGEM</label>
+        <input
+          [(ngModel)]="Origem"
+          name="Origem"
+          id="origem"
+          type="text"
+          class="form-control"
+          placeholder="LOCAL DE PARTIDA"
+        />
+      </div>
     </div>
-    <div class="col">
-    <label for="quatidade">QUANTIDADE DISPONIVEL TOTAL</label>
-      <input id="quatidade" type="text" class="form-control" placeholder="Quantidade total disponivel">
+    <br />
+    <div class="row">
+      <div class="col">
+        <label for="destino">DESTINO</label>
+        <input
+          [(ngModel)]="Destino"
+          name="Destino"
+          id="destino"
+          type="text"
+          class="form-control"
+          placeholder="Qual o Destino"
+        />
+      </div>
     </div>
-  </div>
-<br>
-<div class="row">
-<div class="col">
-<app-salvar></app-salvar>
+    <br />
+    <div class="row">
+      <div class="col">
+        <label for="produto">PRODUTO</label>
+        <input
+          [(ngModel)]="Produto"
+          name="Produto"
+          id="produto"
+          type="text"
+          class="form-control"
+          placeholder="Qual o produto a ser transportado"
+        />
+      </div>
+      <div class="col">
+        <label for="quatidade">QUANTIDADE DISPONIVEL TOTAL</label>
+        <input
+          [(ngModel)]="Quantidade"
+          name="Quantidade"
+          id="quatidade"
+          type="text"
+          class="form-control"
+          placeholder="Quantidade total disponivel"
+        />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <app-salvar (click)="SalvaOferta()"></app-salvar>
+      </div>
+      <div class="col">
+        <app-pausar (click)="PausarOferta()"></app-pausar>
+      </div>
+    </div>
+  </form>
 </div>
-<div class="col">
-<app-pausar></app-pausar>
-</div>
-</div>
-</form>

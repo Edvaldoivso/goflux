@@ -5,11 +5,19 @@
     <div class="row">
       <div class="col">
         <label for="cnpj">CPF</label>
-        <input id="cnpj" type="text" class="form-control" placeholder="CPF" />
+        <input
+        [(ngModel)]="cnpj"
+        name="cnpj"
+         id="cnpj"
+          type="text"
+           class="form-control"
+            placeholder="CPF" />
       </div>
       <div class="col">
         <label for="nome">NOME</label>
         <input
+        [(ngModel)]="nome"
+        name="nome"
           id="nome"
           type="text"
           class="form-control"
@@ -22,6 +30,8 @@
       <div class="col">
         <label for="cidade">CIDADE</label>
         <input
+        [(ngModel)]="cidade"
+        name="cidade"
           id="cidade"
           type="text"
           class="form-control"
@@ -31,6 +41,8 @@
       <div class="col">
         <label for="estado">ESTADO</label>
         <input
+        [(ngModel)]="estado"
+        name="estado"
           id="estado"
           type="text"
           class="form-control"
@@ -41,8 +53,10 @@
     <br />
     <div class="row">
       <div class="col">
-        <label for="area">ÁREA DE ATUAÇÃO</label>
+        <label for="area">ATUAÇÃO</label>
         <input
+        [(ngModel)]="atuacao"
+        name="atuacao"
           id="area"
           type="text"
           class="form-control"
@@ -50,8 +64,10 @@
         />
       </div>
       <div class="col">
-        <label for="senha">SENHA PARA O ACESSO</label>
+        <label for="senha">SENHA DE ACESSO</label>
         <input
+        [(ngModel)]="senha"
+        name="senha"
           type="text"
           class="form-control"
           placeholder="cadastre uma senha aqui."
@@ -60,16 +76,21 @@
 
       <div class="col">
         <label for="senha">GESTOR DE CONTA?</label><br />
-        <input class="form-check-input" type="checkbox" id="gestor" />
+        <input 
+        [(ngModel)]="gestor"
+        name="gestor"
+        class="form-check-input" 
+        type="checkbox" 
+        id="gestor" />
       </div>
     </div>
     <br />
     <div class="row">
       <div class="col">
-        <app-salvar></app-salvar>
+        <app-salvar (click)="CadastraFuncionario()"></app-salvar>
       </div>
       <div class="col">
-        <app-pausar></app-pausar>
+        <app-pausar (click)="Pausar()"></app-pausar>
       </div>
     </div>
   </form>

@@ -4,11 +4,20 @@
     <div class="row">
       <div class="col">
         <label for="">CNPJ</label>
-        <input id="cnpj" type="text" class="form-control" placeholder="CNPJ" />
+        <input
+          [(ngModel)]="cnpj"
+          name="cnpj"
+          id="cnpj"
+          type="text"
+          class="form-control"
+          placeholder="CNPJ"
+        />
       </div>
       <div class="col">
         <label for="rasao">RASÃO SOCIAL</label>
         <input
+          [(ngModel)]="rasao"
+          name="rasao"
           id="rasao"
           type="text"
           class="form-control"
@@ -21,6 +30,8 @@
       <div class="col">
         <label for="cidade">CIDADE</label>
         <input
+          [(ngModel)]="cidade"
+          name="cidade"
           id="cidade"
           type="text"
           class="form-control"
@@ -30,6 +41,8 @@
       <div class="col">
         <label for="estado">ESTADO</label>
         <input
+          [(ngModel)]="estado"
+          name="estado"
           id="estado"
           type="text"
           class="form-control"
@@ -42,6 +55,8 @@
       <div class="col">
         <label for="area">ÁREA PRODUTORA</label>
         <input
+          [(ngModel)]="area"
+          name="area"
           id="area"
           type="text"
           class="form-control"
@@ -49,8 +64,10 @@
         />
       </div>
       <div class="col">
-        <label for="senha">SENHA PARA O ACESSO</label>
+        <label for="senha">SENHA DE ACESSO</label>
         <input
+          [(ngModel)]="senha"
+          name="senha"
           type="text"
           class="form-control"
           placeholder="cadastre uma senha aqui."
@@ -58,6 +75,6 @@
       </div>
     </div>
     <br />
-     <app-salvar></app-salvar>
+    <app-salvar (click)="CadastraEmpresa()"></app-salvar>
   </form>
 </div>

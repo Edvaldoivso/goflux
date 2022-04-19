@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-cadastro',
@@ -8,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PageCadastroComponent implements OnInit {
 
 
-  public acesso : boolean = false
-
   constructor() { }
+
 
   ngOnInit(): void {
   }
